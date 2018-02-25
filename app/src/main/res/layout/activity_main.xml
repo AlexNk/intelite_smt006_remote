@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="com.project.alexnk.intelite_smt006_remote.MainActivity"
+    tools:layout_editor_absoluteX="0"
+    tools:layout_editor_absoluteY="0">
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleNight"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:checked="false"
+        android:drawableTop="@drawable/night_mode"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/togglePower"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <ToggleButton
+        android:id="@+id/togglePower"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:drawableTop="@drawable/power"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleMax"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toggleNight"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <ToggleButton
+        android:id="@+id/toggleMax"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:drawableTop="@drawable/max_mode"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/togglePower"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <SeekBar
+        android:id="@+id/seekBarBrightness"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:max="9"
+        android:progress="1"
+        android:splitTrack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/togglePower" />
+
+    <SeekBar
+        android:id="@+id/seekBarColor"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:max="9"
+        android:progress="1"
+        android:splitTrack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarBrightness" />
+
+    <ToggleButton
+        android:id="@+id/toggleSleep"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/sleep_mode"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleTimer"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarColor" />
+
+    <ToggleButton
+        android:id="@+id/toggleTimer"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/clock"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleImitation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toggleSleep"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarColor" />
+
+    <ToggleButton
+        android:id="@+id/toggleImitation"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/imitation"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleEco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toggleTimer"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarColor" />
+
+    <ToggleButton
+        android:id="@+id/toggleEco"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/eco_mode"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleImitation"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarColor" />
+
+</android.support.constraint.ConstraintLayout>

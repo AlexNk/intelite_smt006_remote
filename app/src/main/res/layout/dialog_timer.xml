@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:layout_editor_absoluteX="0"
+    tools:layout_editor_absoluteY="0">
+
+
+    <NumberPicker
+        android:id="@+id/pickerOnM"
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/pickerOnH"
+        app:layout_constraintTop_toBottomOf="@+id/toggleAutoOn" />
+
+    <NumberPicker
+        android:id="@+id/pickerOnH"
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleAutoOn" />
+
+    <NumberPicker
+        android:id="@+id/pickerOffH"
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/pickerOffM"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pickerOnM"
+        app:layout_constraintTop_toBottomOf="@+id/toggleAutoOff" />
+
+    <NumberPicker
+        android:id="@+id/pickerOffM"
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleAutoOff" />
+
+    <ToggleButton
+        android:id="@+id/toggleAutoOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textOff="@string/auto_on"
+        android:textOn="@string/auto_on"
+        app:layout_constraintStart_toStartOf="@+id/pickerOnH"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleAutoOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textOff="@string/auto_off"
+        android:textOn="@string/auto_off"
+        app:layout_constraintStart_toStartOf="@+id/pickerOffH"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

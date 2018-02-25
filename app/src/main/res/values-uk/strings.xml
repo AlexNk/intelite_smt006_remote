@@ -1,0 +1,10 @@
+<resources>
+    <string name="trans_not_found">Інфрачервоний передавач не знайдений</string>
+    <string name="freq_not_sup">Необхідна ІЧ частота %d не підтримується</string>
+    <string name="auto_on">Авто вмк.</string>
+    <string name="auto_off">Авто вимк.</string>
+    <string name="enabled">Увімкнено</string>
+    <string name="disabled">Вимкнено</string>
+    <string name="dlg_imitation_title">Імітація присутньості вдома</string>
+    <string name="dlg_timer_title">Таймер</string>
+</resources>
