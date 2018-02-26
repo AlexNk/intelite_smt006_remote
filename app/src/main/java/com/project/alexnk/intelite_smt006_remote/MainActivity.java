@@ -301,6 +301,7 @@ public class MainActivity extends AppCompatActivity
         remoteMsg.save();
         updateUI();
 
+        /*
         if (emulating)
         {
             String res = "";
@@ -316,6 +317,7 @@ public class MainActivity extends AppCompatActivity
             }
             Log.v("IR sent", res);
         }
+        */
     }
 
     private void updateUI()
