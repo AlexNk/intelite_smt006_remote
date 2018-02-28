@@ -1,6 +1,7 @@
 <resources>
+    <string name="app_name">Пульт для Intelite SMT</string>
     <string name="trans_not_found">Инфракрасный передатчик не обнаружен</string>
-    <string name="freq_not_sup">Требуемая ИК частота %d не поддерживается</string>
+    <string name="freq_not_sup">Устройство не поддерживает требуемую ИК частоту</string>
     <string name="auto_on">Авто вкл.</string>
     <string name="auto_off">Авто выкл.</string>
     <string name="enabled">Включено</string>

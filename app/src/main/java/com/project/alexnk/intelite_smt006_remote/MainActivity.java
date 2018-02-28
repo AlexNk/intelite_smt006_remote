@@ -14,7 +14,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.ToggleButton;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity
 {
     private final boolean emulating = false;
 
-    private final int ir_frequency = 38400;
+    private int ir_frequency = 0;
     private ConsumerIrManager consumerIrManager;
     private SavingRemoteMsg remoteMsg;
 
@@ -283,13 +282,13 @@ public class MainActivity extends AppCompatActivity
 
         ConsumerIrManager.CarrierFrequencyRange[] freqRange = consumerIrManager.getCarrierFrequencies();
         for (ConsumerIrManager.CarrierFrequencyRange freq : freqRange)
-        {
-            if ((freq.getMinFrequency() <= ir_frequency) && (freq.getMaxFrequency() >= ir_frequency ))
-                return;
-        }
+            ir_frequency = Math.max(ir_frequency, (freq.getMinFrequency() + freq.getMaxFrequency()) / 2 );
 
-        String msg = String.format(getResources().getString(R.string.freq_not_sup), ir_frequency);
-        showMessage(msg, getResources().getString(R.string.OK), true);
+        if (ir_frequency == 0)
+        {
+            String msg = getResources().getString(R.string.freq_not_sup);
+            showMessage(msg, getResources().getString(R.string.OK), true);
+        }
     }
 
     private void syncState()

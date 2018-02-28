@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name" translatable="false">Intelite 1-SMT-006 Remote</string>
+    <string name="app_name">Intelite SMT Remote</string>
     <string name="OK" translatable="false">OK</string>
     <string name="preference_file_key" translatable="false">ce9af27b61ee4f3186e08fe2bef3a9c9</string>
     <string name="trans_not_found">IR emitter not found</string>
-    <string name="freq_not_sup">Required IR frequency %d is not supported</string>
+    <string name="freq_not_sup">No suitable IR frequency</string>
     <string name="auto_on">Auto on</string>
     <string name="auto_off">Auto off</string>
     <string name="enabled">Enabled</string>

@@ -1,6 +1,7 @@
 <resources>
+    <string name="app_name">Пульт для Intelite SMT</string>
     <string name="trans_not_found">Інфрачервоний передавач не знайдений</string>
-    <string name="freq_not_sup">Необхідна ІЧ частота %d не підтримується</string>
+    <string name="freq_not_sup">Пристрій не підтримує необхідну ІЧ частоту</string>
     <string name="auto_on">Авто вмк.</string>
     <string name="auto_off">Авто вимк.</string>
     <string name="enabled">Увімкнено</string>
