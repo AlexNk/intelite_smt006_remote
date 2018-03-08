@@ -281,8 +281,22 @@ public class MainActivity extends AppCompatActivity
         }
 
         ConsumerIrManager.CarrierFrequencyRange[] freqRange = consumerIrManager.getCarrierFrequencies();
+        final int best_freq = 38400;
         for (ConsumerIrManager.CarrierFrequencyRange freq : freqRange)
-            ir_frequency = Math.max(ir_frequency, (freq.getMinFrequency() + freq.getMaxFrequency()) / 2 );
+        {
+            final int min = freq.getMinFrequency();
+            final int max = freq.getMaxFrequency();
+            if ((min <= best_freq) && (max >= best_freq))
+            {
+                ir_frequency = best_freq;
+                break;
+            }
+
+            if (Math.abs(best_freq - min) < Math.abs(best_freq - ir_frequency))
+                ir_frequency = min;
+            if (Math.abs(best_freq - max) < Math.abs(best_freq - ir_frequency))
+                ir_frequency = max;
+        }
 
         if (ir_frequency == 0)
         {
